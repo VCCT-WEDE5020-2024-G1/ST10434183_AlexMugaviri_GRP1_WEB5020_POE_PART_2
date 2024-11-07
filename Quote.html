@@ -25,25 +25,37 @@
         </p>
     </div>
 
-    <div class="google-form">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerl4lWKOVaMsqvpTuUD7R1Hi_bh_KJRODsxZUAjZxDVpLN0g/viewform?embedded=true" 
-        width="600" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        <div class="summary">
-            <h2>How It Works</h2>
-        
-        <p>
-            Getting a quote from LINGsCARS is fast and simple. Just follow these steps:
-            <br>Select Your Car: Browse our wide range of cars by category, brand, or model. Whether you’re after a small city car or a luxury SUV, we’ve got something for everyone.
-            <br>Choose Your Terms: Pick your preferred leasing duration, mileage allowance, and any optional extras you might need.
-            <br>Enter Your Details: Fill out the form with your contact information so we can send you your personalized quote.
-        </p>
-        </div>
-        
-    </div>
+    <form name="myform" id="myform" method="post" action="cgi_bin/myform.cgi" enctype="text/plain" target="_blank" onsubmit="return confirmSubmission()">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName" placeholder="Enter your first name" required>
+
+        <label for="myEmail">Email:</label>
+        <input type="email" name="myEmail" id="myEmail" placeholder="Enter your email" required>
+
+        <label for="myPassword">Password:</label>
+        <input type="password" name="myPassword" id="myPassword" placeholder="Create a password" required>
+
+        <label for="myTel">Phone Number:</label>
+        <input type="tel" name="myTel" id="myTel" placeholder="Enter your phone number" required>
+
+        <input type="submit" name="button" id="button" value="Submit"/>
+    </form>
+
+    <h2>How It Works</h2>
+    <p>
+        Getting a quote from LINGsCARS is fast and simple. Just follow these steps:
+        <br>Select Your Car: Browse our wide range of cars by category, brand, or model. Whether you’re after a small city car or a luxury SUV, we’ve got something for everyone.
+        <br>Choose Your Terms: Pick your preferred leasing duration, mileage allowance, and any optional extras you might need.
+        <br>Enter Your Details: Fill out the form with your contact information so we can send you your personalized quote.
+    </p>
 
     <footer>
-        <p>&copy; 2024 LINGsCARS</p>
+        <p>LINGsCARS is a Car Leasing company based in the UK.</p>
+        <h3>You can trust LINGsCARS</h3>
+        <p>&copy; <span id="current-year"></span> LINGsCARS</p>
     </footer>
+
+    <script src="java.js"></script>
 
 </body>
 </html>
